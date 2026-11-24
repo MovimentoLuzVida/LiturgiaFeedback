@@ -51,20 +51,11 @@ h1 em { color: var(--gold); font-weight: 500; }
 .privacy-icon { border: 1.4px solid var(--gold); border-radius: 5px 5px 8px 8px; transform: scale(.78); }
 .privacy-icon::before { content: ""; position: absolute; left: 3px; top: -6px; width: 7px; height: 9px; border: 1.4px solid var(--gold); border-bottom: 0; border-radius: 8px 8px 0 0; }
 .hero-art { min-height: 300px; position: relative; display: grid; place-items: center; isolation: isolate; }
-.art-halo { width: min(310px, 77%); aspect-ratio: 1; border: 1px solid rgba(189,150,96,.45); border-radius: 50%; position: absolute; transform: translate(4%, -4%); }
+.art-halo { width: min(330px, 80%); aspect-ratio: 1; border: 1px solid rgba(189,150,96,.45); border-radius: 50%; position: absolute; transform: translateY(-3%); }
 .art-halo::before, .art-halo::after { content: ""; position: absolute; inset: 16px; border: 1px solid rgba(189,150,96,.2); border-radius: inherit; }
 .art-halo::after { inset: -14px; border-style: dashed; opacity: .5; }
-.art-window { position: absolute; top: 27px; right: 21%; width: 74px; height: 116px; border: 1px solid var(--gold); border-radius: 40px 40px 2px 2px; background: rgba(255,254,250,.46); box-shadow: inset 0 0 0 7px rgba(189,150,96,.08); }
-.art-window::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; border-left: 1px solid rgba(189,150,96,.55); }
-.art-window::after { content: ""; position: absolute; top: 45%; left: 0; right: 0; border-top: 1px solid rgba(189,150,96,.55); }
-.window-cross { position: absolute; z-index: 1; width: 1px; height: 24px; top: 18px; left: 50%; background: var(--gold); }
-.window-cross::after { content: ""; position: absolute; width: 12px; left: -5.5px; top: 7px; border-top: 1px solid var(--gold); }
-.window-star { position: absolute; left: 50%; bottom: 11px; transform: translateX(-50%); color: var(--gold); font-size: 14px; }
-.art-book { position: relative; width: 235px; height: 154px; margin-top: 91px; transform: rotate(-8deg); border-radius: 9px 9px 12px 10px; background: linear-gradient(104deg, #173f35 0 49%, #285447 50% 100%); box-shadow: 0 24px 35px rgba(19,49,40,.24), inset 0 -4px 0 rgba(7,28,23,.18); }
-.art-book::before { content: ""; position: absolute; left: 50%; top: 0; height: 100%; border-left: 1px solid rgba(255,255,255,.22); }
-.art-book::after { content: "✦"; position: absolute; left: 50%; top: 30px; transform: translateX(-50%); color: var(--gold-pale); font-size: 28px; }
-.book-page { position: absolute; right: 12px; left: calc(50% + 8px); bottom: 14px; height: 3px; background: rgba(230,215,190,.4); box-shadow: 0 -7px rgba(230,215,190,.24), 0 -14px rgba(230,215,190,.18); }
-.book-mark { position: absolute; width: 11px; height: 42px; right: 23px; top: -1px; background: #b4655e; clip-path: polygon(0 0,100% 0,100% 100%,50% 77%,0 100%); }
+.crest-glow { position: absolute; width: min(260px, 68%); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(23,63,53,.12), rgba(23,63,53,0) 72%); }
+.hero-crest { position: relative; z-index: 1; display: block; width: min(246px, 66%); max-height: 258px; object-fit: contain; filter: drop-shadow(0 15px 14px rgba(19,49,40,.22)); }
 .art-caption { position: absolute; bottom: -1px; color: #8d8778; font-size: 9px; letter-spacing: .25em; }
 
 .form-wrap { padding: 52px clamp(24px, 6vw, 78px) 48px; background: var(--white); border: 1px solid #ecebe4; border-radius: 5px; box-shadow: 0 18px 50px rgba(37,52,46,.055); }
