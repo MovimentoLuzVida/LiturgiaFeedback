@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#173f35" />
+    <meta name="description" content="Conte como é sua experiência com a liturgia diária e a Liturgia das Horas." />
+    <title>Queremos ouvir você | MELV Liturgia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="MELV Liturgia, início">
+          <span class="brand-mark" aria-hidden="true"><span></span><i></i></span>
+          <span class="brand-copy"><strong>MELV</strong><small>LITURGIA</small></span>
+        </a>
+        <span class="topbar-note">Uma escuta do Movimento Luz-Vida</span>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Sua experiência importa</p>
+            <h1 id="page-title">Queremos ouvir<br /><em>você.</em></h1>
+            <p class="hero-lede">Como é acompanhar a liturgia diária e a Liturgia das Horas no seu dia a dia?</p>
+            <p class="hero-description">Estamos ouvindo os membros do Luz-Vida para conhecer os aplicativos, sites e livros que usam — e entender o que facilita ou dificulta esse momento de oração.</p>
+            <div class="hero-meta" aria-label="Detalhes da pesquisa">
+              <span><b class="meta-icon time-icon" aria-hidden="true"></b> Cerca de 3 minutos</span>
+              <span><b class="meta-icon privacy-icon" aria-hidden="true"></b> Sem nome ou e-mail</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-halo"></div>
+            <div class="art-window"><span class="window-cross"></span><span class="window-star">✦</span></div>
+            <div class="art-book"><div class="book-page"></div><div class="book-mark"></div></div>
+            <span class="art-caption">ORAÇÃO · ESCUTA · COMUNHÃO</span>
+          </div>
+        </section>
+
+        <section class="form-wrap" aria-labelledby="form-heading">
+          <div class="form-intro">
+            <div>
+              <p class="eyebrow form-eyebrow">Sua contribuição</p>
+              <h2 id="form-heading">Conte como tem sido</h2>
+            </div>
+            <span class="required-note"><i aria-hidden="true">*</i> Obrigatório</span>
+          </div>
+
+          <form id="survey-form" novalidate>
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Não preencha este campo</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <fieldset class="question-block" data-required-group="platforms">
+              <legend><span class="question-number">01</span><span>Quais meios você usa para acompanhar a liturgia?<i>*</i></span></legend>
+              <p class="question-hint">Marque todas as opções que se aplicam.</p>
+              <div class="choice-grid">
+                <label class="choice"><input type="checkbox" name="platforms" value="iliturgia" /><span class="checkmark"></span><span>iLiturgia</span></label>
+                <label class="choice"><input type="checkbox" name="platforms" value="outro-app" /><span class="checkmark"></span><span>Outro aplicativo</span></label>
+                <label class="choice"><input type="checkbox" name="platforms" value="site" /><span class="checkmark"></span><span>Site ou página na internet</span></label>
+                <label class="choice"><input type="checkbox" name="platforms" value="livro" /><span class="checkmark"></span><span>Livro impresso</span></label>
+                <label class="choice"><input type="checkbox" name="platforms" value="youtube" /><span class="checkmark"></span><span>Vídeos ou transmissões</span></label>
+                <label class="choice"><input type="checkbox" name="platforms" value="nao-uso" /><span class="checkmark"></span><span>Não uso nenhum atualmente</span></label>
+              </div>
+              <label class="text-label optional-label" for="other-platform">Se quiser, diga o nome de outro aplicativo ou site</label>
+              <input class="text-input" id="other-platform" name="otherPlatform" type="text" maxlength="100" placeholder="Opcional" />
+              <p class="field-error" data-error-for="platforms" role="alert"></p>
+            </fieldset>
+
+            <fieldset class="question-block" data-required-group="contentTypes">
+              <legend><span class="question-number">02</span><span>O que você costuma acompanhar?<i>*</i></span></legend>
+              <p class="question-hint">Pode marcar mais de uma opção.</p>
+              <div class="choice-grid choice-grid-3">
+                <label class="choice"><input type="checkbox" name="contentTypes" value="liturgia-diaria" /><span class="checkmark"></span><span>Liturgia diária</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="laudes" /><span class="checkmark"></span><span>Laudes</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="tercia" /><span class="checkmark"></span><span>Tércia</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="sexta" /><span class="checkmark"></span><span>Sexta</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="nona" /><span class="checkmark"></span><span>Nona</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="vesperas" /><span class="checkmark"></span><span>Vésperas</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="completas" /><span class="checkmark"></span><span>Completas</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="oficio-leituras" /><span class="checkmark"></span><span>Ofício das Leituras</span></label>
+                <label class="choice"><input type="checkbox" name="contentTypes" value="acompanho-outro" /><span class="checkmark"></span><span>Outro momento</span></label>
+              </div>
+              <p class="field-error" data-error-for="contentTypes" role="alert"></p>
+            </fieldset>
+
+            <fieldset class="question-block" data-required-group="frequency">
+              <legend><span class="question-number">03</span><span>Com que frequência você acompanha esses conteúdos?<i>*</i></span></legend>
+              <div class="choice-grid frequency-grid">
+                <label class="choice"><input type="radio" name="frequency" value="diariamente" /><span class="radio-mark"></span><span>Todos ou quase todos os dias</span></label>
+                <label class="choice"><input type="radio" name="frequency" value="algumas-vezes-semana" /><span class="radio-mark"></span><span>Algumas vezes por semana</span></label>
+                <label class="choice"><input type="radio" name="frequency" value="semanalmente" /><span class="radio-mark"></span><span>Uma vez por semana</span></label>
+                <label class="choice"><input type="radio" name="frequency" value="ocasionalmente" /><span class="radio-mark"></span><span>De vez em quando</span></label>
+                <label class="choice"><input type="radio" name="frequency" value="estou-comecando" /><span class="radio-mark"></span><span>Estou começando agora</span></label>
+              </div>
+              <p class="field-error" data-error-for="frequency" role="alert"></p>
+            </fieldset>
+
+            <fieldset class="question-block" data-required-group="difficulties">
+              <legend><span class="question-number">04</span><span>O que já foi difícil ou poderia ser melhor?<i>*</i></span></legend>
+              <p class="question-hint">Marque o que você já encontrou na sua experiência.</p>
+              <div class="choice-grid">
+                <label class="choice"><input type="checkbox" name="difficulties" value="achar-conteudo" /><span class="checkmark"></span><span>Encontrar o conteúdo certo para o dia</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="entender-ordem" /><span class="checkmark"></span><span>Entender a ordem das partes da Hora</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="calendario" /><span class="checkmark"></span><span>Saber qual celebração ou memória se aplica</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="navegacao" /><span class="checkmark"></span><span>Navegar entre salmos, hinos e leituras</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="leitura-celular" /><span class="checkmark"></span><span>Ler no celular (letra ou organização)</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="offline" /><span class="checkmark"></span><span>Usar sem internet ou encontrar áudio</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="conteudo-incompleto" /><span class="checkmark"></span><span>Encontrar conteúdo incompleto ou desatualizado</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="outra-dificuldade" /><span class="checkmark"></span><span>Outra dificuldade</span></label>
+                <label class="choice"><input type="checkbox" name="difficulties" value="sem-dificuldades" /><span class="checkmark"></span><span>Não encontrei dificuldades importantes</span></label>
+              </div>
+              <p class="field-error" data-error-for="difficulties" role="alert"></p>
+            </fieldset>
+
+            <div class="question-block text-question">
+              <label class="text-label" for="example"><span class="question-number">05</span><span>Se puder, conte um exemplo</span><b class="optional-tag">Opcional</b></label>
+              <p class="question-hint">O que aconteceu? Em qual aplicativo, site ou livro? Não inclua nomes, e-mails ou outros dados pessoais.</p>
+              <textarea class="text-input textarea" id="example" name="example" maxlength="1500" rows="4" placeholder="Por exemplo: eu queria encontrar…"></textarea>
+              <div class="char-count"><span id="example-count">0</span>/1500</div>
+            </div>
+
+            <div class="question-block text-question">
+              <label class="text-label" for="works-well"><span class="question-number">06</span><span>O que funciona bem para você hoje?</span><b class="optional-tag">Opcional</b></label>
+              <textarea class="text-input textarea" id="works-well" name="worksWell" maxlength="1000" rows="3" placeholder="Uma função, formato ou jeito de acompanhar que ajuda…"></textarea>
+            </div>
+
+            <div class="question-block text-question last-question">
+              <label class="text-label" for="suggestion"><span class="question-number">07</span><span>Se pudesse melhorar uma coisa, qual seria?</span><b class="optional-tag">Opcional</b></label>
+              <textarea class="text-input textarea" id="suggestion" name="suggestion" maxlength="1000" rows="3" placeholder="Sua ideia…"></textarea>
+            </div>
+
+            <div class="form-footer">
+              <p class="privacy-note"><span class="privacy-shield" aria-hidden="true">✦</span><span><strong>Sem identificação no formulário.</strong> Não pedimos nome ou e-mail. As respostas serão usadas para compreender necessidades e orientar melhorias na experiência litúrgica. Evite incluir dados pessoais nos campos abertos.</span></p>
+              <button class="submit-button" id="submit-button" type="submit"><span>Enviar minha experiência</span><b aria-hidden="true">✦</b></button>
+              <p class="submit-status" id="submit-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+
+        <section class="closing-note">
+          <div class="closing-flourish" aria-hidden="true">✦</div>
+          <p>Obrigado por ajudar o Movimento Luz-Vida a escutar com atenção.</p>
+        </section>
+      </main>
+
+      <footer class="footer"><span>MELV LITURGIA</span><span>Movimento Evangelizador Luz-Vida</span></footer>
+    </div>
+  </body>
+</html>
