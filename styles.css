@@ -169,3 +169,33 @@ h2 { margin-bottom: 0; color: var(--forest-deep); font: 600 clamp(27px, 3vw, 36p
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+.conference-dialog { width: min(560px, calc(100% - 30px)); max-height: 88vh; padding: 0; border: 0; border-radius: 8px; background: transparent; color: var(--ink); }
+.conference-dialog::backdrop { background: rgba(17,34,28,.66); backdrop-filter: blur(3px); }
+.conference-card, .conference-dashboard { padding: clamp(22px,5vw,42px); background: var(--white); border: 1px solid #ecebe4; border-radius: 6px; box-shadow: 0 20px 60px rgba(15,30,24,.22); }
+.conference-card h2, .conference-heading h2 { margin-bottom: 22px; }
+.dialog-close { float: right; border: 0; background: none; color: #68776d; font-size: 27px; cursor: pointer; }
+.conference-label { display: grid; gap: 8px; margin: 16px 0; color: var(--ink); font-size: 13px; font-weight: 600; }
+.conference-input { min-width: 0; padding: 11px 13px; border: 1px solid #dce1d9; border-radius: 4px; background: white; color: var(--ink); font: inherit; }
+.conference-input:focus { outline: 3px solid rgba(189,150,96,.3); border-color: #668675; }
+.conference-primary, .conference-secondary, .conference-danger { min-height: 40px; padding: 9px 14px; border: 0; border-radius: 4px; cursor: pointer; font: 600 13px "DM Sans", sans-serif; }
+.conference-primary { width: 100%; margin-top: 8px; background: var(--forest); color: white; }
+.conference-secondary { background: #eef3ee; color: var(--forest); }
+.conference-danger { background: #f8ece9; color: #923f36; }
+.conference-status { min-height: 20px; color: #923f36; font-size: 13px; }
+.conference-dashboard { margin: 28px 0 50px; }
+.conference-heading, .conference-card-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.conference-heading .eyebrow { margin-bottom: 7px; }
+.conference-toolbar { display: flex; align-items: center; gap: 15px; margin: 22px 0; }
+.conference-toolbar .conference-input { flex: 1; }
+.conference-toolbar span { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.conference-list { display: grid; gap: 16px; }
+.conference-card { padding: 22px; border: 1px solid var(--line); border-radius: 5px; background: #fffefa; }
+.conference-card-header { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.conference-card-header h3 { margin: 0; color: var(--forest); font: 600 16px "DM Sans", sans-serif; }
+.conference-actions { display: flex; gap: 8px; }
+.conference-answer { display: grid; grid-template-columns: minmax(140px,1fr) 2fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efeee8; font-size: 13px; line-height: 1.55; }
+.conference-answer strong { color: #637168; }
+.conference-answer p { margin: 0; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.conference-empty { padding: 35px; color: var(--muted); text-align: center; }
+@media (max-width:620px) { .conference-dashboard { padding: 20px 14px; margin: 20px -3px 35px; } .conference-heading { align-items: flex-start; } .conference-heading h2 { font-size: 24px; } .conference-toolbar { align-items: flex-start; flex-direction: column; } .conference-toolbar .conference-input { width: 100%; } .conference-card { padding: 15px 12px; } .conference-card-header { align-items: flex-start; flex-direction: column; } .conference-answer { grid-template-columns: 1fr; gap: 3px; } }
