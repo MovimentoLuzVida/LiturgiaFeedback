@@ -48,10 +48,10 @@
   }
 
   const labels = {
-    platforms: { iliturgia: "iLiturgia", "outro-app": "Outro aplicativo", site: "Site", livro: "Livro impresso", youtube: "Vídeos/transmiss�es", "nao-uso": "Não usa atualmente" },
+    platforms: { iliturgia: "iLiturgia", "outro-app": "Outro aplicativo", site: "Site", livro: "Livro impresso", youtube: "Vídeos/transmissões", "nao-uso": "Não usa atualmente" },
     content: { "liturgia-diaria": "Liturgia diária", laudes: "Laudes", tercia: "Tércia", sexta: "Sexta", nona: "Nona", vesperas: "Vésperas", completas: "Completas", "oficio-leituras": "Ofício das Leituras", "acompanho-outro": "Outro momento" },
-    frequency: { diariamente: "Todos ou quase todos os dias", "algumas-vezes-semana": "Algumas vezes por semana", semanalmente: "Uma vez por semana", ocasionalmente: "De vez em quando", "estou-comecando": "Está come�ando agora" },
-    difficulties: { "achar-conteudo": "Encontrar o conteúdo do dia", "entender-ordem": "Entender a ordem da Hora", calendario: "Calendário/celebração", navegacao: "Navegação entre partes", "leitura-celular": "Leitura no celular", offline: "Uso sem internet/áudio", "conteudo-incompleto": "Conte�do incompleto", "outra-dificuldade": "Outra dificuldade", "sem-dificuldades": "Sem dificuldades importantes" }
+    frequency: { diariamente: "Todos ou quase todos os dias", "algumas-vezes-semana": "Algumas vezes por semana", semanalmente: "Uma vez por semana", ocasionalmente: "De vez em quando", "estou-comecando": "Está começando agora" },
+    difficulties: { "achar-conteudo": "Encontrar o conteúdo do dia", "entender-ordem": "Entender a ordem da Hora", calendario: "Calendário/celebração", navegacao: "Navegação entre partes", "leitura-celular": "Leitura no celular", offline: "Uso sem internet/áudio", "conteudo-incompleto": "Conteúdo incompleto", "outra-dificuldade": "Outra dificuldade", "sem-dificuldades": "Sem dificuldades importantes" }
   };
   function decode(json, map) { try { return JSON.parse(json).map(value => map[value] || value).join(", ") || "-"; } catch { return "-"; } }
   function addField(card, title, value) {
