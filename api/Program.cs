@@ -1,8 +1,6 @@
 using System.Data;
 using System.Text.Json;
-using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Data.SqlClient;
-using System.Threading.RateLimiting;
 using System.Collections.Concurrent;
 using System.Security.Cryptography;
 using System.Text;
@@ -25,43 +23,15 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
         policy.WithOrigins(allowedOrigins).WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS").WithHeaders("Content-Type", "Authorization");
 }));
 
-builder.Services.AddRateLimiter(options =>
-{
-    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-    options.AddPolicy("survey-submit", context =>
-    {
-        var clientKey = context.Connection.RemoteIpAddress?.ToString() ?? "unknown-client";
-        return RateLimitPartition.GetFixedWindowLimiter(clientKey, _ => new FixedWindowRateLimiterOptions
-        {
-            PermitLimit = 8,
-            Window = TimeSpan.FromMinutes(10),
-            QueueLimit = 0,
-            AutoReplenishment = true
-        });
-    });
-    options.AddPolicy("conference-login", context =>
-    {
-        var clientKey = context.Connection.RemoteIpAddress?.ToString() ?? "unknown-client";
-        return RateLimitPartition.GetFixedWindowLimiter(clientKey, _ => new FixedWindowRateLimiterOptions
-        {
-            PermitLimit = 5,
-            Window = TimeSpan.FromMinutes(5),
-            QueueLimit = 0,
-            AutoReplenishment = true
-        });
-    });
-});
-
 var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseCors();
-app.UseRateLimiter();
 
 app.MapGet("/api/health", () => Results.Ok(new { status = "ok" }));
 app.MapGet("/api/health/database", CheckDatabase);
 
-app.MapPost("/api/v1/responses", SubmitResponse).RequireRateLimiting("survey-submit");
-app.MapPost("/api/v1/conference/login", ConferenceLogin).RequireRateLimiting("conference-login");
+app.MapPost("/api/v1/responses", SubmitResponse);
+app.MapPost("/api/v1/conference/login", ConferenceLogin);
 app.MapPost("/api/v1/conference/logout", ConferenceLogout);
 app.MapGet("/api/v1/conference/responses", ListResponses);
 app.MapPut("/api/v1/conference/responses/{id:guid}", UpdateResponse);
